@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xala</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: #1a001f;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+      
+        .navbar img {
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.5s;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #4b0082;
+        }
+
+        .container {
+            margin-top: 80px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container h1 {
+            font-size: 4em;
+            margin-bottom: 10px;
+        }
+
+        .container img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .content {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        .add-bot-btn {
+            background-color: #008cba;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-bot-btn:hover {
+            background-color: #005f5f;
+        }
+
+        .gray-line {
+            border-top: 1px solid #d3d3d3;
+            margin: 40px 0;
+        }
+
+        .header {
+            background-color: black;
+            padding: 10px 20px;
+        }
+
+        .header a {
+            color: #d3d3d3;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .header a:hover {
+            color: lightgrey;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .visible {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        #content-sections {
+            background-color: black;
+            padding: 20px;
+        }
+
+        #content-sections p {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="https://cdn.glitch.global/e2fe3e21-51b7-448e-a61d-9ca86eaa5ec3/Xala.png?v=1717258706507" alt="Xala">
+<div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="commands.html">Comandi</a>
+    <a href="team.html">Team</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">ToS</a>
+</div>
+
+        <a href="https://discord.gg/V2G437ypaw" target="_blank">
+            <img src="https://cdn.glitch.global/e2fe3e21-51b7-448e-a61d-9ca86eaa5ec3/Discord.png?v=1717259071240" alt="Discord Server" style="margin-right: 20px;">
+        </a>
+    </div>
+
+    <div class="container" id="home">
+        <h1>Xala</h1>
+        <img src="https://cdn.glitch.global/e2fe3e21-51b7-448e-a61d-9ca86eaa5ec3/Xala%20BOT.png?v=1717258706507" alt="Logo BOT">
+    </div>
+
+    <div class="content">
+        <h2>Chi siamo?</h2>
+        <p>Xala è un BOT Discord che offre molte funzionalità di moderazione del tuo server Discord. Stiamo cercando di implementare sistemi di moderazione avanzata, sistemi di sicurezza e molto altro. Clicca il bottone qui sotto per unire il BOT al tuo server e supportarci!</p>
+        <button class="add-bot-btn" onclick="window.location.href='https://discord.com/oauth2/authorize?client_id=1246485127677087795&permissions=8&scope=bot'">Aggiungi il BOT</button>
+        <div class="gray-line"></div>
+    </div>
+
+    <div class="header">
+        <a href="#" onclick="toggleContent(event, 1)">Posso copiare il BOT e/o il sito?</a>
+        <a href="#" onclick="toggleContent(event, 2)">Chi ha creato il BOT e il sito?</a>
+        <a href="#" onclick="toggleContent(event, 3)">Quando è nato Xala?</a>
+        <a href="#" onclick="toggleContent(event, 4)">Dove posso contattarvi?</a>
+        <a href="#" onclick="toggleContent(event, 5)">Come posso entrare a far parte dello staff di Xala?</a>
+    </div>
+
+    <div id="content-sections">
+        <div id="content1" class="hidden">
+            <p>No, non accettiamo copie dei nostri progetti se il fondatore non ha dato esplicitamente il consenso all'utente che ha richiesto di copiare il sito o il BOT.</p>
+        </div>
+        <div id="content2" class="hidden">
+            <p>Il sito e il BOT sono stati creati da @0_.ale._0. E' possibile visualizzare il team nella sezione apposita sulla barra in alto del sito.</p>
+        </div>
+        <div id="content3" class="hidden">
+            <p>Xala non ha una data di nascita precisa. Se si intende quando il progetto è stato ideato e iniziato a creare, allora il 2 Giugno 2024; Se invece si intende quando il progetto è stato avviato allora è il 3 Giugno 2024.</p>
+        </div>
+        <div id="content4" class="hidden">
+            <p>Ci puoi contattare apendo il ticket nel nostro server Discord. Puoi cliccare il bottone in alto a destra sulla barra principaple del sito.</p>
+        </div>
+        <div id="content5" class="hidden">
+            <p>Per entrare a far parte dello staff di Xala devi entrare nel nostro server Discord (puoi trovare il bottone per unirti in alto a destra sulla barra principale), verificarti e andare nel canale chiamato "applications" per candidarti.</p>
+        </div>
+    </div>
+
+    <script>
+        function navigateTo(event, section) {
+            event.preventDefault();
+            // Aggiungi il codice per la navigazione alla sezione desiderata
+            console.log('Navigazione a:', section);
+        }
+
+        function toggleContent(event, section) {
+            event.preventDefault();
+            let visibleSection = document.querySelector('.visible');
+            if (visibleSection && visibleSection.id === 'content' + section) {
+                visibleSection.classList.remove('visible');
+                visibleSection.classList.add('hidden');
+            } else {
+                if (visibleSection) {
+                    visibleSection.classList.remove('visible');
+                    visibleSection.classList.add('hidden');
+                }
+                document.getElementById('content' + section).classList.remove('hidden');
+                document.getElementById('content' + section).classList.add('visible');
+            }
+        }
+    </script>
+</body>
+</html>
